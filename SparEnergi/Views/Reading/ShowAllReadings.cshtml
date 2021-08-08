@@ -1,0 +1,32 @@
+﻿@using SparEnergi;
+@model ReadingModel
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Energy</th>
+            <th scope="col">Unit</th>
+            <th scope="col">Water</th>
+            <th scope="col">Unit</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{ foreach (ReadingModel data in ViewBag.readingModelsArray)
+                        {
+            <tr>
+                <td>@data.Date</td>
+                <td>@data.EnergyUsed</td>
+                <td>@data.EnergyUnit</td>
+                <td>@data.WaterUsed</td>
+                <td>@data.WaterUnit</td>
+            </tr> } }
+
+
+    </tbody>
+</table>
+
+
+<div>
+    <a class="btn btn-primary text-center" role="button" style="margin: 1em" asp-controller="Login" asp-action="ProcessLogin">Back to user's page</a>
+</div>

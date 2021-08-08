@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<link href="css/bootstrap.css" rel="stylesheet" />
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to SparEnergi!</h1>
+</div>
+<div>
+    <ul class="navbar-nav flex-grow-1">
+        <li class="text-center" style="margin: 2px">
+            <p>Please choose one of the following:</p>
+        </li>
+        <li class="text-center">
+            <a class="btn btn-primary btn-lg" role="button" style="margin: 5px" asp-controller="Login" asp-action="Index">Login</a>
+            <a class="btn btn-secondary" role="button" asp-controller="Register" asp-action="Index">Register</a>
+            <hr />
+            <a class="btn btn-primary" role="button" asp-controller="Advisor" asp-action="ProcessRequestMeeting">Request energy advisor meeting</a>
+            <hr />
+        </li>
+    </ul>
+</div>
+<div>
+    <img src="https://cdn.vox-cdn.com/thumbor/6itLJS9BZ-B5gXPjM1AB_z-ZKVI=/0x0:3000x2000/1200x800/filters:focal(1260x760:1740x1240)/cdn.vox-cdn.com/uploads/chorus_image/image/65890203/iStock_1067331614.7.jpg" alt="House picture" width="1200" height="800">
+</div>
+

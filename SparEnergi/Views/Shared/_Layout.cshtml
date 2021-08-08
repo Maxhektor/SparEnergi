@@ -1,0 +1,56 @@
+﻿@model SparEnergi.Models.UserModel
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SparEnergi</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <class ="navbar-brand">SparEnergi</class>
+            </div>
+            <div id="google_translate_element"></div>
+
+        </nav>
+    </header>
+
+    <div class="container" style="overflow: auto;">
+            <main role="main" class="pb-3" style="height: 75%;">
+                @RenderBody()
+            </main>
+    </div>
+
+
+    <footer class="border-top footer text-muted" style="height: auto; position: absolute; background-color: white;">
+        
+            &copy; 2021 - SparEnergi,
+            Energistyrelsen,
+            Carsten Neibuhrs Gade 43,
+            1577 København V,
+            www.ens.dk
+        
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
+
+
+
